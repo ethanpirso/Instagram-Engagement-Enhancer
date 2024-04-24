@@ -18,7 +18,7 @@ Follow the instructions at Google Cloud Documentation to set up your API key.
      ```
 
 ## Running the Analysis
-To run the analysis, execute the main.ipynb notebook:
+To run the analysis, execute the main.ipynb notebook.
  
 ## Modules
 - google_vision.py: Interfaces with Google Vision API to label images.
