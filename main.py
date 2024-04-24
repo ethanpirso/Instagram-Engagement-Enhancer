@@ -1,4 +1,4 @@
-from google_vision.py import label_images
+from google_vision import label_images
 from topic_modeling import find_optimal_topics
 from engagement_analysis import analyze_engagement
 
