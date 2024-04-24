@@ -1,3 +1,4 @@
 /credentials/
 /etc/
 /data/posts/
+/__pycache__/
