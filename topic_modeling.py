@@ -16,9 +16,16 @@ def find_optimal_topics(labels_list, start=2, limit=20, step=3):
     """Determines the optimal number of topics for LDA."""
     coherence_values = []
     model_list = []
+    topic_numbers = []  # List to track the number of topics
+
     for num_topics in range(start, limit, step):
         model, _, _, coherence = perform_lda(labels_list, num_topics=num_topics)
         model_list.append(model)
         coherence_values.append(coherence)
-    # Add more analysis or visualization of coherence values if necessary
-    return model_list, coherence_values
+        topic_numbers.append(num_topics)  # Track the number of topics
+
+    # Find the index of the highest coherence value
+    max_coherence_idx = coherence_values.index(max(coherence_values))
+    optimal_num_topics = topic_numbers[max_coherence_idx]  # Get the optimal number of topics
+
+    return model_list, coherence_values, optimal_num_topics  # Return the optimal number of topics as well
